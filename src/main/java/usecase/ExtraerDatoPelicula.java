@@ -42,7 +42,7 @@ public class ExtraerDatoPelicula implements Function<DatoPeliculaCommand, List<D
                 String titulo = pelicula.select(".info-content h1").text();
                 String sinopsis = pelicula.select(".sinopsis").text();
                 String year = pelicula.select(".info-content p:nth-of-type(2) span:nth-of-type(2)").text();
-                String urlVideo = pelicula.select(".player.player-normal ul:nth-of-type(2)  li:nth-of-type(1)").attr("data-video");
+                String urlVideo = pelicula.select(".player.player-normal ul:nth-of-type(2)  li:nth-of-type(2)").attr("data-video");
                 catalogo.addPelicula(
                         UUID.randomUUID().toString(),
                         titulo,

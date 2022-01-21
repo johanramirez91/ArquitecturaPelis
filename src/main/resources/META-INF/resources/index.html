@@ -28,11 +28,11 @@
     </div>
 </div>
 <script type="text/javascript">
-      var connected = false;
-      var socket;
+      let connected = false;
+      let socket;
       document.getElementById("connect").onclick = function() {
           if (!connected) {
-              var aggregateId = document.getElementById("aggregateId").value;
+              let aggregateId = document.getElementById("aggregateId").value;
               console.log("Val: " + aggregateId);
               socket = new WebSocket("ws://" + location.host + "/retrieve/" + aggregateId);
 
